@@ -1,0 +1,27 @@
+#include<stdio.h>
+int num,n,a,s=0;
+int sum(int n);
+int main()
+{
+    printf("Input\nInput number:");
+    scanf("%d",&num);
+    sum(num);
+    printf("\n\nOutput\nSum of digits=%d",s);
+    return 0;
+}
+
+int sum(int n)
+{
+    if(n>0)
+    {
+        a=n%10;
+        n=n/10;
+        s=s+a;
+    
+        return sum(n);
+    }
+
+    if(n==0)
+        return s;
+    
+}
